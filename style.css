@@ -1,0 +1,211 @@
+/*seletor universal, para fazer todo o site ter estas características*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Sometype Mono', monospace;
+}
+/*utilizei o scrool behavior para fazer a transição quando você clica na opções do menu*/
+html{
+    scroll-behavior: smooth;
+}
+/*defini o background da página*/
+body{
+    background: linear-gradient(90deg,black,darkblue);
+}
+/*css do menu*/
+nav{
+    position: absolute;
+    top: 0;
+    display: none;
+    height: 240vh;
+    width: 50%;
+    color: white;
+    background-color: black;
+    animation-duration: 0.3s;
+    animation-name: deslizar;
+}
+/*animação*/
+@keyframes deslizar{
+    from{
+        position: absolute;
+        left: -300px;
+        width: 0%;
+    }
+    to{
+        position: absolute;
+        width: 50%;
+    }
+}
+/*características de cada elemento das listas*/
+li{
+    list-style-type: none;
+}
+/*caracterítica da lista dentro do menu*/
+nav ul {
+    list-style-type: none;
+    margin: 50px 0px 0px 0px;
+    padding: 5px;
+    width: 40%;
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    color: white;
+    animation-duration: 0.3s;
+    animation-name: deslizar;
+}
+/*característica da lista dentro do menu*/
+nav li{
+    padding: 10px;
+}
+/*características do link dentro de cada elemento da lista do menu*/
+nav li a {
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+/*hover para alterar  cor quando passar o mouse por cima*/
+nav li a:hover:not(.active) {
+    background-color: rgb(108, 0, 108);;
+    color: white;
+    }
+/*css do meu cabeçalho com as principais informações sobre mim*/
+#Perfil{
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    border: 3px solid grey;
+    margin-top: 3%;
+    padding: 5%;
+}
+/*css da sessão sobre*/
+#Sobre{
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    border: 3px solid grey;
+    margin-top: 3%;
+    padding: 5%;
+}
+/*css da sessão habilidades*/
+#Habilidades{
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    border: 3px solid grey;
+    margin-top: 3%;
+    padding: 5%;
+}
+/* css do formulário*/
+#Contatos{
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    border: 3px solid grey;
+    margin-top: 3%;
+    padding: 5%;
+}
+/*css da minha foto de perfil*/
+#foto{
+    height: 200px;
+    border-radius: 20px;
+}
+/*css da imagem que utilizei no icone do menu*/
+#icone_menu{
+    background-color: white;
+    margin:0;
+    top: 0;
+    cursor: pointer;
+    position: fixed;
+}
+/*css da lista dentro da sessão habilidades*/
+#lista-conteudo{
+    display: none;
+}
+/*css dos inputs de texto do formulário*/
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(20, 20, 20);
+    border-radius: 4px;
+    resize: vertical;
+    }
+/*css dos títulos de cada campo do formulário*/
+label {
+    padding: 12px;
+    display: none;
+    color: orange;
+}
+/*css do campo país do formulário*/
+#país{
+    width: 105%;
+}
+/*input do botão de enviar do formulário*/
+input[type=submit] {
+    background-color: #00f79c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    }
+/* hover para mudar a cor de fundo do botão do formulário quando o mouse passar por cima*/
+input[type=submit]:hover {
+    background-color:rgb(180, 85, 8);
+    }
+/*container onde fica os campos de preenchimento do formulário*/
+.container {
+    border-radius: 5px;
+    padding: 20px;
+}
+/*alguns cols para responsividade*/
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    }
+.col-75 {
+    float: left;
+    width: 95%;
+    margin-top: 6px;
+    }
+.col-12{
+    width: 100%;
+}
+/*row para alinhar os itens do formulário*/
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+/*css da fonte do google fontes*/
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    }
+/*css para manter a responsividade em desktops*/
+@media(min-width: 550px){
+    .col-12{width:40%}
+    label{display: inline-block;font-size: large;}
+    input[type=text], select, textarea {width: 70%;}
+    .col-75{width: 75%;}
+    nav{width: 30%; height: 300vh;}
+    nav ul{width: 20%;}
+    @keyframes deslizar{
+        from{
+            position: absolute;
+            left: -300px;
+            width: 0%;
+        }
+        to{
+            position: absolute;
+            width: 30%;
+        }
+    }
+    #país{width: 73%;}
+}
