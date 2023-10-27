@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roger Penha</title>
+    <!--importação de elementos externos-->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,22 +12,11 @@
     <script type="text/Javascript" src="script.js"></script>
 </head>
 <body>
-    <img id="icone_menu"  src="menu_icone.png" onclick="aparecer_apagar()" alt="icone do menu" >
-    <header>
-        <div id="Perfil">
-            <h2>Meu Perfil</h2>
-            <img id="foto" class="col-12" src="MinhaFoto.jpg" alt="foto do Roger Penha e companhia">
-            <h3>Roger Penha</h3>
-            <h3>Idade: 17</h3>
-            <h3>Sexo: Masculino</h3>
-            <h3>desenvolvedor Web em treinamento</h3>
-        </div>
-    </header>
-    <!--A nav bar está definindo o endereço dos botões na qual os ids serão distribuídos nas respectivas divs*-->
-<nav id="menu">  
+<!--A nav bar está definindo o endereço dos botões na qual os ids serão distribuídos nas respectivas divs*-->
+<nav id="menu">
     <ul>
         <li>
-            <h2 style="text-align: center;">
+            <h2 style="text-align: left;margin-left: 25px;">
                 MENU
             </h2>
         </li>
@@ -51,12 +41,28 @@
         </li>
     </ul>
 </nav>
+<!--input para abrir o menu-->
+<input type="image" id="icone_menu" onclick="Mudarestado('menu')" src="menu_icone.png">
+<!--cabeçalho da minha página,mostrando as minhas informações principais-->
+    <header>
+        <div id="Perfil">
+            <h2>Meu Perfil</h2>
+            <img id="foto" class="col-12" src="MinhaFoto.jpg" alt="foto do Roger Penha e companhia">
+            <h3>Roger Penha</h3>
+            <h3>Idade: 17</h3>
+            <h3>Sexo: Masculino</h3>
+            <h3>desenvolvedor Web em treinamento</h3>
+        </div>
+    </header>
+    <!--contando um pouco sobre mim-->
     <div id="Sobre">
         <h2>Sobre</h2>
         <p>Sou atualmente um desenvolvedor web em treinamento pelo Senai almirante tamandaré, eu estou fazendo o curso de desenvolvimento de sistemas integrado ao ensino médio</p>
     </div>
+    <!--contando asminhas habildades por meio de uma lista, também utilizei um botão para mostrar e apagar a lista da tela-->
     <div id="Habilidades">
         <h2>Habilidades</h2>
+        <button onclick="Mudarestado2('lista-conteudo')">Mostrar/apagar</button>
         <ul id="lista-conteudo">
             <li>Javascript intermediário</li>
             <li>HTML intermediário</li>
@@ -65,6 +71,7 @@
             <li>Pacote Office avançado</li>
         </ul>
     </div>
+    <!--meu formulário, utilizei 3 inputs para texto e 1 de escolha, também defini um botão para enviar as informações no final-->
     <div class="Contatos" id="Contatos">
         <h2 style="text-align: center;">
             Formulário
@@ -130,7 +137,7 @@
         </div>
         <br>
         <div class="row">
-            <input type="submit" value="Enviar">
+            <input id="enviar" type="submit" value="Enviar">
         </div>
         </form>
     </div>
